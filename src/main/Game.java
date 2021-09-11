@@ -31,8 +31,8 @@ public class Game {
         int aliveNeighbours = 0;
         for (int x = -1; x <= 1; x++) {
             for (int y = -1; y <= 1; y++) {
-                if (cell.getX() + x >= 0 && cell.getX() + x < 200)
-                    if (cell.getY() + y >= 0 && cell.getY() + y < 200) {
+                if (cell.getX() + x >= 0 && cell.getX() + x < rows)
+                    if (cell.getY() + y >= 0 && cell.getY() + y < columns) {
                         Cell currentNeighbourCell = board[cell.getX() + x][cell.getY() + y];
                         if (currentNeighbourCell.isAlive && !currentNeighbourCell.equals(cell)) {
                             aliveNeighbours++;
